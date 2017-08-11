@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# This compiles and runs the game if compilation completes correctly.
+# The Game is compiled using C++14/C++1y
+
+clang++ -c src/main.cpp -std=c++1y -I include
+clang++ main.o -o FindMyBox -lsfml-graphics -lsfml-window -lsfml-system -std=c++1y && ./FindMyBox
+rm main.o
